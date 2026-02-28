@@ -5,21 +5,21 @@
 class Emcogni < Formula
   desc "AI-powered context engine CLI for developer workflows"
   homepage "https://emcogni.com"
-  version "0.1"
-  license "MIT"
+  version "0.1.0"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1/emcogni_0.1_darwin_amd64.tar.gz"
-      sha256 "036e4225162e5a2dc883f7702121875b961966c7d7ca449525779028a33c0e15"
+      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_darwin_amd64.tar.gz"
+      sha256 "639f86c3071754baed28e0569e9fd0fd664e1289582bed3840da0cb951d00312"
 
       def install
         bin.install "emcogni"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1/emcogni_0.1_darwin_arm64.tar.gz"
-      sha256 "f64295bfefe866658eb494ba240ecd29515647e5b16726405a3106dd67f17124"
+      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_darwin_arm64.tar.gz"
+      sha256 "ba3184c3d17d6d8dc86b3c304e4a5c57f046f4388af1420fec7875f93297db45"
 
       def install
         bin.install "emcogni"
@@ -29,19 +29,30 @@ class Emcogni < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1/emcogni_0.1_linux_amd64.tar.gz"
-      sha256 "9a91456074e7fa6721424a3168da4bb33406715914a11c54dc50698a66c6a2e3"
+      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_linux_amd64.tar.gz"
+      sha256 "f2a5e5c3d1c3b8e6fe5128aef3dfc11d626d42bd92c37909bb5800123eff665d"
       def install
         bin.install "emcogni"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1/emcogni_0.1_linux_arm64.tar.gz"
-      sha256 "9d740665d18cb03892436d40951f1604b3f0e5aaba9a774e53be286632813d1a"
+      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_linux_arm64.tar.gz"
+      sha256 "a80b2f8717e4082a68625febf34b3a9da187d2ee2f04aca0cc91941d05cccb9e"
       def install
         bin.install "emcogni"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      emcogni stores context at ~/.emcogni (context.db + config.json).
+      This data is not removed when you uninstall via brew.
+
+      To fully remove all emcogni data and then the binary:
+        emcogni uninstall
+        brew uninstall emcogni
+    EOS
   end
 
   test do
