@@ -6,20 +6,19 @@ class Emcogni < Formula
   desc "AI-powered context engine CLI for developer workflows"
   homepage "https://emcogni.com"
   version "0.1.0"
-  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_darwin_amd64.tar.gz"
-      sha256 "639f86c3071754baed28e0569e9fd0fd664e1289582bed3840da0cb951d00312"
+      url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_darwin_amd64.tar.gz"
+      sha256 "7f2bedea6cf7a152114b64b9c73b721e48fd2945e42c1e39133b5c878bf907bc"
 
       def install
         bin.install "emcogni"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ba3184c3d17d6d8dc86b3c304e4a5c57f046f4388af1420fec7875f93297db45"
+      url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_darwin_arm64.tar.gz"
+      sha256 "021c60ad4af4e41916ee54e010124f0ab7faba2b4c3c10465f8448da5738f8fa"
 
       def install
         bin.install "emcogni"
@@ -29,15 +28,15 @@ class Emcogni < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_linux_amd64.tar.gz"
-      sha256 "f2a5e5c3d1c3b8e6fe5128aef3dfc11d626d42bd92c37909bb5800123eff665d"
+      url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_linux_amd64.tar.gz"
+      sha256 "e15e86b48f54d41713027f870d56e28e121a7ab9b87d0d7551ab0c422c2a89ab"
       def install
         bin.install "emcogni"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embedded-cognizance/emcogni-code/releases/download/v0.1.0/emcogni_0.1.0_linux_arm64.tar.gz"
-      sha256 "a80b2f8717e4082a68625febf34b3a9da187d2ee2f04aca0cc91941d05cccb9e"
+      url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_linux_arm64.tar.gz"
+      sha256 "f08340b82df3628c38910a86f39b3fd53ad9c9a526d792e5202582462cb3664e"
       def install
         bin.install "emcogni"
       end
