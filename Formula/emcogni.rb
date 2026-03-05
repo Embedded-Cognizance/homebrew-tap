@@ -10,7 +10,7 @@ class Emcogni < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_darwin_amd64.tar.gz"
-      sha256 "80ea604e217ac2871eac98d0b3f3bb8b35d49339c27ae6f13b3a56baf99c457c"
+      sha256 "36899ea374d86d7fbb5f9052364764be0dd29b669a7bcb8a3918f8f82acb549b"
 
       def install
         bin.install "emcogni"
@@ -18,7 +18,7 @@ class Emcogni < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_darwin_arm64.tar.gz"
-      sha256 "9df00c35a1f6363e2b02c2a294d102b4c32f667d8521e31387f497747c94c334"
+      sha256 "893771c1d195ec78679e6a6a0911212ca923c43a7b34e13987044fb63fa083b1"
 
       def install
         bin.install "emcogni"
@@ -29,14 +29,14 @@ class Emcogni < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_linux_amd64.tar.gz"
-      sha256 "258d4eb8abba9a35a96286749a75986cdea632161e0309724126e41b08982713"
+      sha256 "bfec892b637b978e5caa7e271a15b68d22a6ad309ecf0570f05a965997687990"
       def install
         bin.install "emcogni"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v0.1.0/emcogni_0.1.0_linux_arm64.tar.gz"
-      sha256 "bfb9baf5b1b19b81e674f051012304de96ef7eb20a498c45e6b11d3fce3608a9"
+      sha256 "c02b2afac4ba7bec9fa3460868b0d03a21025143ed2f37a52baf0a43b31cd6b5"
       def install
         bin.install "emcogni"
       end
