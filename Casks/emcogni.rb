@@ -14,22 +14,22 @@ cask "emcogni" do
   on_macos do
     on_intel do
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v#{version}/emcogni_#{version}_darwin_amd64.tar.gz"
-      sha256 "6ebf478821169a7e26706f40dd851b34e54d2489ff94898a12a9fa6d6e390109"
+      sha256 "8b6b81ab44bbdd87224751c90b1e644a97bf34cee7a5176825559aa979f5ea80"
     end
     on_arm do
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v#{version}/emcogni_#{version}_darwin_arm64.tar.gz"
-      sha256 "fdc288ea8d904385d5399d5b7a7c824a6cc39e93770faa321fcf08bdaf0d14d4"
+      sha256 "d33f359d19abac1cad5ba74ebc4cf07d11d50261c26b8a343f2162172d52ae80"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v#{version}/emcogni_#{version}_linux_amd64.tar.gz"
-      sha256 "295f66406b5b0e2da462d227b955716b2391d734a4127d64358f3a3a06ef2f38"
+      sha256 "971723bf6925740033ae12cf95057ffdf44661aa3b03593aa1a1d8cf3ddbc5bb"
     end
     on_arm do
       url "https://github.com/embedded-cognizance/emcogni-code-release/releases/download/v#{version}/emcogni_#{version}_linux_arm64.tar.gz"
-      sha256 "7c2e8ea7d9d9f52eac5ccdeab7f9b27fef3a07dc23d176ce805bc5d63dcc41a1"
+      sha256 "86ceb555bd385e6db444e6dbd0c52e312ce4398a16358b9492e9c11459702f7e"
     end
   end
 
